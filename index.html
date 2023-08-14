@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment Solution for Mudule 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center; /* Menengahkan isi body */
+      }
+
+      .sections-container {
+        display: flex; /* Menggunakan flexbox untuk membuat section sejajar */
+        justify-content: space-around; /* Membuat jarak sejajar di sekitar bagian */
+        flex-wrap: wrap; /* Pindahkan ke baris baru jika tidak cukup ruang */
+      }
+
+      .section {
+        position: relative; /* Menambahkan posisi relatif */
+        width: 30%; /* Lebar sekitar 30% untuk mengakomodasi tiga section */
+        border: 1px solid black;
+        padding: 20px;
+        margin: 20px 0; /* Memberikan jarak atas dan bawah */
+        box-sizing: border-box;
+
+        /* Memberikan warna latar belakang yang berbeda pada setiap bagian */
+        background-color: #f2f2f2; /* Warna default */
+      }
+
+      /* Memberikan warna latar belakang berbeda untuk setiap bagian */
+      .section:nth-child(1) {
+        background-color: #ffc0cb; /* Warna bagian 1 */
+      }
+
+      .section:nth-child(2) {
+        background-color: #87ceeb; /* Warna bagian 2 */
+      }
+
+      .section:nth-child(3) {
+        background-color: #90ee90; /* Warna bagian 3 */
+      }
+
+      .section-title {
+        position: absolute; /* Mengatur posisi absolut untuk nama section */
+        top: 0;
+        right: 0;
+        background-color: #ffcc00;
+        padding: 5px 10px;
+      }
+
+      /* Penyesuaian untuk ukuran tablet (768px - 991px) */
+      @media (max-width: 991px) {
+        .section {
+          width: 45%; /* Lebar sekitar 45% pada ukuran tablet */
+        }
+      }
+
+      /* Penyesuaian untuk ukuran laptop (992px - 1199px) */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .section {
+          width: 30%; /* Kembali ke lebar 30% pada ukuran laptop */
+        }
+      }
+
+      /* Penyesuaian untuk ukuran layar lebih kecil, misalnya ponsel (kurang dari 767px) */
+      @media (max-width: 767px) {
+        .sections-container {
+          flex-direction: column; /* Menumpuk section pada ukuran ponsel */
+        }
+
+        .section {
+          width: 100%; /* Mengisi seluruh lebar pada ukuran ponsel */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Our Car</h1>
+    <div class="sections-container">
+      <div class="section">
+        <div class="section-title">Toyota Prius</div>
+        <p>
+          Toyota Prius is a popular hybrid car known for its excellent fuel
+          efficiency, combining a gasoline engine with an electric motor. It's
+          renowned for its low emissions and innovative technology.
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">Ford Mustang</div>
+        <p>
+          Ford Mustang is an iconic American muscle car, celebrated for its
+          powerful V8 engine, distinctive design, and high-performance
+          capabilities. It's a symbol of classic American automotive culture.
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">Tesla Model 3</div>
+        <p>
+          Tesla Model 3 is an electric car with cutting-edge technology and
+          impressive acceleration. It's known for its long electric range,
+          innovative Autopilot features, and commitment to sustainable
+          transportation.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
